@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: .9375rem;
+  font-family: 'Alata', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 85%;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Alata', sans-serif;
+  font-weight: 300;
+}
+
+#banner {
+  background-image: url(/images/mobile/image-hero.jpg);
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+}
+
+#banner .container {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  padding-top: 2.8rem;
+}
+
+#banner .container .logo h1 {
+  font-family: 'Alata', sans-serif;
+  font-size: 1.675rem;
+  color: white;
+}
+
+#banner .container nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+#banner .container nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 170px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#banner .container nav ul li {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+}
+
+#banner .container nav ul li a {
+  display: block;
+  font-size: 2em;
+  text-decoration: none;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#banner .container nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+#banner .container .toggle-btn {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  right: 25px;
+  top: 2.8rem;
+  cursor: pointer;
+}
+
+#banner .container .toggle-btn .bar {
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+#banner .container .hero-text {
+  position: absolute;
+  top: 450%;
+  height: 12rem;
+  border: 1px solid white;
+  padding: 1rem;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#banner .container .hero-text h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+}
+
+#toggle:checked ~ nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toggle:checked ~ nav ul {
+  top: 70px;
+}
+
+#toggle:checked ~ nav ul li {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+#toggle:checked ~ nav ul li:nth-child(1) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+}
+
+#toggle:checked ~ nav ul li:nth-child(2) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+}
+
+#toggle:checked ~ nav ul li:nth-child(3) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+}
+
+#toggle:checked ~ nav ul li:nth-child(4) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+}
+
+#toggle:checked ~ nav + label.toggle-btn .bar {
+  background-color: red;
+}
+
+#toggle:checked ~ nav + label.toggle-btn .bar:nth-child(2) {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+}
+
+#toggle:checked ~ nav + label.toggle-btn .bar:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+#toggle:checked ~ nav + label.toggle-btn .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+#leader {
+  height: 95vh;
+  width: auto;
+  background-color: white;
+}
+
+#leader .container {
+  margin: auto;
+}
+
+#leader .container .img-holder {
+  position: relative;
+  top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#leader .container .img-holder img {
+  width: 100%;
+}
+
+#leader .container .text-section {
+  position: relative;
+  top: 9rem;
+}
+
+#leader .container .text-section h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#leader .container .text-section p {
+  margin-top: 1rem;
+  color: #8c8c8c;
+  text-align: center;
+  line-height: 1.875rem;
+  font-weight: 600;
+}
+
+#creations {
+  min-height: 100vh;
+}
+
+#creations h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+#creations .img-holder {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+#creations .img-holder ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#creations .img-holder ul li {
+  display: block;
+  width: 100%;
+  height: 8rem;
+}
+
+#creations .img-holder ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 1;
+}
+
+#creations .img-holder ul li h2 {
+  position: absolute;
+  top: 3.6rem;
+  left: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+/*# sourceMappingURL=mian.css.map */
